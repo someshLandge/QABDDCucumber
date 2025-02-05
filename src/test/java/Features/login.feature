@@ -3,7 +3,6 @@ Feature: Login Functionality
   Background: 
     Given User is Navigated to Login page
 
-  
   Scenario Outline: Check login with valid credentials
     When User Enter Valid Email <ValidEmail>
     And User Enter Valid Password <Validpassword>
@@ -26,7 +25,7 @@ Feature: Login Functionality
       | InvalidEmail     | Invalidpassword | Error_worning                                         |
       | test01@gmail.com |            1234 | Warning: No match for E-Mail Address and/or Password. |
 
-@singleTest
+  @singleTest
   Scenario Outline: Check Login with Invalid Email and Valid Password
     When User Enter Invalid Email <InvalidEmail>
     And User Enter Valid Password <Validpassword>
